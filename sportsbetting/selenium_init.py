@@ -29,8 +29,7 @@ def start_selenium_aux(site):
     try:
         if site in DRIVER:
             return True
-        DRIVER[site] = selenium.webdriver.Chrome(
-            sb.PATH_DRIVER, options=options)
+        DRIVER[site] = selenium.webdriver.Chrome(options=options)
         colorama.init()
         print(termcolor.colored('Driver started for {}{}'
                                 .format(site, colorama.Style.RESET_ALL),
